@@ -1,0 +1,16 @@
+<div class="h-16 w-16 rounded" *ngIf="techCard.imageUrl == ''">
+  {{ techCard.name }}
+</div>
+<div class="group h-16 w-16" *ngIf="techCard.imageUrl !== ''">
+  <div class="absolute z-10 scale-0 transition delay-250 duration-300 group-hover:scale-100 rounded">
+    <div class="bg-[#232F57] w-64 h-64 rounded -ml-24 -mt-24 flex p-4">
+      <p class="font-[Inter] text-base leading-6 text-[#F1F5F9]">{{techCard.description}}</p>
+    </div>
+  </div>
+  <svg
+    cIcon
+    name="{{ techCard.imageUrl }}"
+    title="{{ techCard.imageUrl }}"
+    class="fill-[#68788D] stroke-[#68788D] text-[#68788D] transition ease-in-out delay-50 duration-250 group-hover:scale-0"
+  ></svg>
+</div>

@@ -1,0 +1,10 @@
+<section id="projects" class="flex flex-col items-center gap-10 p-20">
+  <div class="flex items-start gap-[0.625rem]">
+    <p class="text-4xl font-extrabold leading-[2.75rem] font-[Inter] text-[#23282F]">Some of my projects</p>
+  </div>
+  <div class="flex w-full flex-wrap items-start justify-between gap-y-4 px-8">
+    <ng-container *ngFor="let project of projects">
+      <app-project-card [project]="project"></app-project-card>
+    </ng-container>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+<section id="about" class="flex flex-col items-start gap-10 p-20">
+  <div class="flex w-full flex-col items-start gap-8 px-8 py-0">
+    <div class="flex items-start gap-[0.625rem]">
+      <p class="font-[Inter] text-4xl font-extrabold leading-[2.75rem] text-[#23282F]">
+        A bit more about me
+      </p>
+    </div>
+    <div class="flex items-start gap-8">
+      <p class="w-1/2 font-[Inter] text-base font-normal leading-6 text-[#45505E]">
+        I am James, a self-taught product designer based in Austria. Four years
+        ago, in my first year of university, I co-founded an online marketplace
+        and created its website from scratch despite having no prior knowledge
+        of web development. I built website, attracted hundreds of visitors,
+        enjoyed small wins, big failures and almost everyting in between.
+        <br /><br />
+        That inspired me to innovate my mind and cemented my fascination with
+        technology and design. One and a half year later, I slowly transitioned
+        to designing websites and mobile apps just for fun which in no time,
+        turned into an unexpected career.
+      </p>
+      <p class="w-1/2 font-[Inter] text-base font-normal leading-6 text-[#45505E]">
+        Being a computer science student, I can comprehend how layouts are built
+        and implemented in code. With this curiosity to build products, I have
+        mastered how products are designed from the root - starting from
+        ideation and research to creating basic design systems, high fidelity
+        mockups and interactive prototypes.
+        <br /><br />
+        Since then, I have been helping my clients to solve user and core
+        business problems and turning their ideas into more meaningful
+        experiences that simplify the lives of millions of people across the
+        world.
+      </p>
+    </div>
+  </div>
+  <div class="flex w-full flex-col items-start gap-4">
+    <div
+      class="flex w-full items-center justify-center gap-4 rounded-lg border border-solid p-4"
+    >
+      <ng-container *ngFor="let category of categories; let i = index">
+        <div
+          class="flex flex-1 flex-col items-center gap-8 self-stretch rounded-lg p-8"
+        >
+          <h5 class="font-[Inter] text-[1.375rem] font-semibold leading-8 text-[#23282F]">
+            {{ category }}
+          </h5>
+          <div class="flex flex-col items-center gap-12">
+            <ng-container *ngFor="let group of techCardsGrouped">
+              <ng-container *ngIf="group[0].category == category">
+                <div class="flex items-center gap-12">
+                  <ng-container *ngFor="let card of group">
+                    <app-tech-card [techCard]="card"></app-tech-card>
+                  </ng-container>
+                </div>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+        <hr
+          *ngIf="i < categories.size - 1"
+          class="h-80 w-[0.0625rem] bg-slate-600"
+        />
+      </ng-container>
+    </div>
+  </div>
+</section>

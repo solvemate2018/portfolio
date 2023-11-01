@@ -1,0 +1,23 @@
+<section
+  id="footer"
+  class="flex w-full flex-col items-start justify-center gap-4 px-20 pb-8"
+>
+  <div
+    class="flex flex-col items-start gap-[0.625rem] self-stretch border-t p-8 pb-0"
+  >
+    <div class="flex flex-col items-center gap-4 self-stretch">
+      <div class="flex items-start gap-8">
+            <ng-container *ngFor="let social of socials">
+              <a href={{social.link}} class="w-6 h-6">
+                <svg cIcon name={{social.icon}} size="xl" title={{social.icon}} class="text-[#68788D] fill-[#68788D] stroke-[#68788D]"></svg>
+              </a>
+            </ng-container>
+      </div>
+      <div class="flex items-start gap-1">
+        <p class="font-[Inter] text-sm leading-[1.375rem] text-[#68788D]">
+          © 2023 Georgi Dimitrov
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

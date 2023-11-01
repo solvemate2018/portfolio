@@ -1,0 +1,21 @@
+<section id="header" class="flex h-10 w-full justify-between px-20 py-5">
+  <div class="flex justify-start gap-8">
+    <ng-container *ngFor="let givenRoute of routesList; let i = index">
+      <app-link
+        *ngIf="i < routesList.length / 2"
+        [route]="givenRoute"
+      ></app-link>
+    </ng-container>
+  </div>
+  <div>
+    <h4 class="font-[Inter] text-xl font-extrabold">Georgi Dimitrov</h4>
+  </div>
+  <div class="flex justify-start gap-8">
+    <ng-container *ngFor="let givenRoute of routesList; let i = index">
+      <app-link
+        *ngIf="i >= routesList.length / 2"
+        [route]="givenRoute"
+      ></app-link>
+    </ng-container>
+  </div>
+</section>
