@@ -7,10 +7,7 @@
       <p class="font-[Inter] text-base leading-6 text-[#F1F5F9]">{{techCard.description}}</p>
     </div>
   </div>
-  <svg
-    cIcon
-    name="{{ techCard.imageUrl }}"
-    title="{{ techCard.imageUrl }}"
-    class="fill-[#68788D] stroke-[#68788D] text-[#68788D] transition ease-in-out delay-50 duration-250 group-hover:scale-0"
-  ></svg>
+  <div class="h-16 w-16 flex justify-center items-center transition ease-in-out delay-50 duration-250 group-hover:scale-0">
+    <img src={{techCard.imageUrl}} class="object-left">
+</div>
 </div>

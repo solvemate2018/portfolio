@@ -14,13 +14,11 @@ import { TechCardComponent } from './SubComponents/tech-card/tech-card.component
 import { ProjectCardComponent } from './SubComponents/project-card/project-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from '@coreui/angular';
-import { IconModule, IconSetService } from '@coreui/icons-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppHeaderComponent,
-    AppIntroComponent,
     AppIntroComponent,
     AppAboutComponent,
     AppProjectsComponent,
@@ -35,9 +33,7 @@ import { IconModule, IconSetService } from '@coreui/icons-angular';
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
-    IconModule
   ],
-  providers: [IconSetService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
