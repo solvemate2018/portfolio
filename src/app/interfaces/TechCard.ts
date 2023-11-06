@@ -3,4 +3,5 @@ export interface TechCard {
   name: String;
   description: String;
   imageUrl: String;
+  stars: Number;
 }

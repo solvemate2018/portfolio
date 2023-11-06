@@ -13,7 +13,7 @@ import { LinkComponent } from './SubComponents/link/link.component';
 import { TechCardComponent } from './SubComponents/tech-card/tech-card.component';
 import { ProjectCardComponent } from './SubComponents/project-card/project-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarouselModule } from '@coreui/angular';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
