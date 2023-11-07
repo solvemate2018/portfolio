@@ -8,4 +8,5 @@ import { TechCard } from 'src/app/interfaces/TechCard';
 })
 export class TechCardComponent {
   @Input() techCard!: TechCard;
+  @Input() rotated!: Boolean;
 }

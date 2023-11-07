@@ -1,14 +1,13 @@
+<a href="{{ project.link }}" target="_blank">
 <div
-  class="flex w-[28rem] flex-shrink-0 flex-col items-start gap-4 rounded-lg border border-solid p-8 shadow-md"
+  class="flex xl:w-[28rem] w-full flex-shrink-0 flex-col items-start gap-4 rounded-lg border border-solid p-8 shadow-md border-primary-dark dark:border-primary hover:border-primary dark:hover:border-primary-dark bg-primary dark:bg-primary-dark group dark:hover:bg-primary hover:bg-primary-dark"
 >
   <div class="flex flex-col items-start gap-1">
-    <h5 class="text-[1.375rem] font-semibold leading-8 font-[Inter] text-[#23282F]">{{ project.name }}</h5>
-    <p class="text-base leading-6 font-[Inter] text-[#45505E]">{{ project.description }}</p>
+    <h5 class="text-[1.375rem] font-semibold leading-8 font-[Inter] text-primary-dark dark:text-primary group-hover:text-primary dark:group-hover:text-primary-dark">{{ project.name }}</h5>
+    <p class="text-base leading-6 font-[Inter] text-secondary dark:text-secondary-dark group-hover:text-secondary-dark dark:group-hover:text-secondary">{{ project.description }}</p>
     <div class="h-8 w-full flex gap-4">
       <img *ngFor="let tech of project.techUsed;" src={{tech}} class="h-8 w-8">
     </div>
   </div>
-  <a class="flex items-start gap-1 py-[0.125rem] " href="{{ project.link }}" target="_blank">
-    <p class="text-[0.875rem] leading-5 font-[Inter] text-[#23282F]">Learn more -></p>
-  </a>
 </div>
+</a>

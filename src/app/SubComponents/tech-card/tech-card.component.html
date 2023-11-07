@@ -1,14 +1,33 @@
 <div class="h-16 w-16 rounded" *ngIf="techCard.imageUrl == ''">
   {{ techCard.name }}
 </div>
-<div class="group h-16 w-16" *ngIf="techCard.imageUrl !== ''">
-  <div class="absolute z-10 scale-0 transition delay-250 duration-300 group-hover:scale-100 rounded">
-    <div [ngClass]="{'-ml-10': techCard.stars == 4, '-ml-6': techCard.stars == 3, '-ml-4': techCard.stars == 2}" class="bg-[#232F57] w-fit h-fit rounded  -mt-2 flex flex-col p-4 gap-1 items-center justify-center" >
-      <p class="text-[#F1F5F9] font-[Inter]">{{techCard.name}}</p>
-      <div class="flex gap-1"><img src="assets/star.svg" class="h-6" *ngFor="let e of [].constructor(techCard.stars); let i = index"></div>
+<div
+  class="group relative h-16 w-16 overflow-visible dark:h-20 dark:w-20"
+  *ngIf="techCard.imageUrl !== ''"
+>
+  <div
+    [ngClass]="{'scale-100 group-hover:scale-0': rotated, 'scale-0 group-hover:scale-100': !rotated}"
+    class="delay-250 absolute left-1/2 z-10 min-w-fit -translate-x-1/2  transform rounded transition duration-300 "
+  >
+    <div
+      class="flex w-[7.5rem] h-20 flex-col items-center justify-center gap-1 rounded bg-primary-dark p-2 dark:bg-primary"
+    >
+      <p class="w-max font-[Inter] text-primary dark:text-primary-dark">
+        {{ techCard.name }}
+      </p>
+      <div class="flex w-max gap-1">
+        <img
+          src="assets/star.svg"
+          class="h-6"
+          *ngFor="let e of [].constructor(techCard.stars); let i = index"
+        />
+      </div>
     </div>
   </div>
-  <div class="h-16 w-16 flex justify-center items-center transition ease-in-out delay-50 duration-250 group-hover:scale-0">
-    <img src={{techCard.imageUrl}} class="object-left">
-</div>
+  <div
+    [ngClass]="{'scale-0 group-hover:scale-100': rotated, 'scale-100 group-hover:scale-0': !rotated}"
+    class="delay-50 duration-250 flex h-16 w-16 items-center justify-center transition ease-in-out  dark:h-20 dark:w-20 dark:rounded-xl dark:bg-primary dark:p-5"
+  >
+    <img src="{{ techCard.imageUrl }}" class="object-left" />
+  </div>
 </div>

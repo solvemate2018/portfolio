@@ -1,5 +1,5 @@
-<section id="header" class="flex h-10 w-full justify-between px-20 py-5">
-  <div class="flex justify-start gap-8">
+<section id="header" class="flex h-10 w-full xl:justify-between justify-center px-20 py-5 bg-primary dark:bg-primary-dark">
+  <div class="justify-start gap-8 xl:flex hidden">
     <ng-container *ngFor="let givenRoute of routesList; let i = index">
       <app-link
         *ngIf="i < routesList.length / 2"
@@ -8,9 +8,9 @@
     </ng-container>
   </div>
   <div>
-    <h4 class="font-[Inter] text-xl font-extrabold">Georgi Dimitrov</h4>
+    <h4 class="font-[Inter] text-xl font-extrabold text-primary-dark dark:text-tertiary">Georgi Dimitrov</h4>
   </div>
-  <div class="flex justify-start gap-8">
+  <div class="justify-start gap-8 xl:flex hidden">
     <ng-container *ngFor="let givenRoute of routesList; let i = index">
       <app-link
         *ngIf="i >= routesList.length / 2"

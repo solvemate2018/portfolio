@@ -14,6 +14,9 @@ import { TechCardComponent } from './SubComponents/tech-card/tech-card.component
 import { ProjectCardComponent } from './SubComponents/project-card/project-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'primeng/carousel';
+import { TechCardsCategoriesComponent } from './SubComponents/tech-cards-categories/tech-cards-categories.component';
+import { TechCardsLegendComponent } from './SubComponents/tech-cards-legend/tech-cards-legend.component';
+import { AboutMeIntroComponent } from './SubComponents/about-me-intro/about-me-intro.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { CarouselModule } from 'primeng/carousel';
     LinkComponent,
     TechCardComponent,
     ProjectCardComponent,
+    TechCardsCategoriesComponent,
+    TechCardsLegendComponent,
+    AboutMeIntroComponent,
   ],
   imports: [
     BrowserModule,

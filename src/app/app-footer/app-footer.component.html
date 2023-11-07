@@ -1,14 +1,12 @@
 <section
   id="footer"
-  class="flex w-full flex-col items-start justify-center gap-4 px-20 pb-8"
+  class="flex w-full flex-col items-start justify-center gap-4 px-20 pb-4 bg-primary dark:bg-primary-dark border-none"
 >
-  <div
-    class="flex flex-col items-start gap-[0.625rem] self-stretch border-t p-8 pb-0"
-  >
+  <div class="flex flex-col items-start gap-2 self-stretch border-t p-4 pb-0 border-none" >
     <div class="flex flex-col items-center gap-4 self-stretch">
       <div class="flex items-start gap-8">
             <ng-container *ngFor="let social of socials">
-              <a href={{social.link}} class="w-6 h-6 flex justify-center items-center" target="_blank" rel="noopener noreferrer">
+              <a href={{social.link}} class="w-6 h-6 flex justify-center items-center dark:p-1 dark:bg-primary dark:rounded-lg dark:w-7 dark:h-7" target="_blank" rel="noopener noreferrer">
                 <img src={{social.icon}}>
               </a>
             </ng-container>
