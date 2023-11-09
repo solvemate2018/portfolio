@@ -2,7 +2,7 @@
   {{ techCard.name }}
 </div>
 <div
-  class="group relative h-16 w-16 overflow-visible dark:h-20 dark:w-20"
+  class="group relative overflow-visible xl:h-20 xl:w-20 h-16 w-16 flex justify-center items-center"
   *ngIf="techCard.imageUrl !== ''"
 >
   <div
@@ -10,15 +10,15 @@
     class="delay-250 absolute left-1/2 z-10 min-w-fit -translate-x-1/2  transform rounded transition duration-300 "
   >
     <div
-      class="flex w-[7.5rem] h-20 flex-col items-center justify-center gap-1 rounded bg-primary-dark p-2 dark:bg-primary"
+      class="flex xl:w-[7.5rem] w-[5.5rem] h-20 flex-col items-center justify-center gap-1 rounded bg-primary-dark p-2 dark:bg-primary"
     >
-      <p class="w-max font-[Inter] text-primary dark:text-primary-dark">
+      <p class="w-max font-[Inter] text-primary xl:text-base text-sm dark:text-primary-dark">
         {{ techCard.name }}
       </p>
       <div class="flex w-max gap-1">
         <img
           src="assets/star.svg"
-          class="h-6"
+          class="xl:h-6 h-4"
           *ngFor="let e of [].constructor(techCard.stars); let i = index"
         />
       </div>
@@ -26,7 +26,7 @@
   </div>
   <div
     [ngClass]="{'scale-0 group-hover:scale-100': rotated, 'scale-100 group-hover:scale-0': !rotated}"
-    class="delay-50 duration-250 flex h-16 w-16 items-center justify-center transition ease-in-out  dark:h-20 dark:w-20 dark:rounded-xl dark:bg-primary dark:p-5"
+    class="delay-50 duration-250 flex h-20 w-20 items-center justify-center transition ease-in-out dark:rounded-xl dark:bg-primary p-2"
   >
     <img src="{{ techCard.imageUrl }}" class="object-left" />
   </div>

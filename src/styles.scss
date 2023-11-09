@@ -2,5 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "primeng/resources/themes/lara-light-blue/theme.css";
+
 @import "primeng/resources/primeng.css";
+
+@layer components{
+  .button {
+    @apply flex rounded xl:px-6 xl:py-[0.875rem] px-4 py-2 text-center font-[Inter] border text-primary bg-primary-dark dark:text-primary-dark  dark:bg-primary hover:text-primary-dark hover:bg-primary dark:hover:bg-primary-dark dark:hover:text-primary dark:hover:border-primary hover:border-primary-dark
+  }
+  .button-reversed {
+    @apply flex rounded border border-solid xl:px-6 xl:py-[0.875rem] px-4 py-2 text-center font-[Inter] text-primary-dark border-secondary dark:text-secondary-dark dark:border-secondary-dark hover:text-primary hover:bg-primary-dark dark:hover:bg-primary dark:hover:text-primary-dark dark:hover:border-primary-dark hover:border-primary
+  }
+}
+
+
+
