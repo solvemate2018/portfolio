@@ -246,6 +246,12 @@ export class DataService {
         link: 'https://github.com/solvemate2018/coronaportal',
         techUsed: ["assets/techIcons/html.svg", "assets/techIcons/java.svg", "assets/techIcons/spring.svg", "assets/techIcons/mysql.svg"],
       },
+      {
+        name: 'PD Architecture',
+        description: `The project involves creating a straightforward, single-page website for PD Design Concept company. The website will feature a basic showcase of the company's projects, introduce their team, and include a contact form for visitors to get in touch.`,
+        link: 'https://solvemate2018.github.io/architecture/',
+        techUsed: ["assets/techIcons/html.svg", "assets/techIcons/css.svg", "assets/techIcons/javascript.svg", "assets/techIcons/tailwind.svg", "assets/techIcons/react.svg"],
+      },
     ];
   }
 
